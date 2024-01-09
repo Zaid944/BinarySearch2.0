@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import ARROW_SVG from "../assets/down_arrow.png";
 import SEARCH_ICON from "../assets/search_icon.png";
-import { useDispatch } from "react-redux";
-import { setStatus } from "../redux/filterSlice";
 import DifficultyDropdown from "./DifficultyDropdown";
+import StatusDropdown from "./statusDropdown";
 const Filters = () => {
-  const dispatch = useDispatch();
   const [difficultyDropdown, setDifficultyDropdown] = useState(false);
   const [statusDropdown, setStatusDropdown] = useState(false);
   return (
@@ -44,34 +42,7 @@ const Filters = () => {
               </div>
             </div>
           </button>
-          {statusDropdown && (
-            <div className='mt-1 absolute rounded-md w-1/12 bg-slate-800 p-4'>
-              <div
-                className='text-white cursor-pointer'
-                onClick={() => {
-                  dispatch(setStatus("Todo"));
-                }}
-              >
-                Todo
-              </div>
-              <div
-                className='text-green-600 cursor-pointer'
-                onClick={() => {
-                  dispatch(setStatus("Complete"));
-                }}
-              >
-                Complete
-              </div>
-              <div
-                className='text-yellow-400 cursor-pointer'
-                onClick={() => {
-                  dispatch(setStatus("Uncomplete"));
-                }}
-              >
-                Uncomplete
-              </div>
-            </div>
-          )}
+          {statusDropdown && <StatusDropdown />}
         </div>
         <div className='w-[345px] pl-14 py-12'>
           <input
