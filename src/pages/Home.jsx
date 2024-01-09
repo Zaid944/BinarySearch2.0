@@ -2,7 +2,6 @@ import Filters from "../components/Filters";
 import ProblemsSection from "../components/ProblemsSection";
 import StatsPieChart from "../components/StatsPieChart";
 import { data, options, doughnutLabel } from "../utils/StatsPieChartProps";
-
 const Home = () => {
   return (
     <div className='flex'>

@@ -1,9 +1,24 @@
+import { useEffect, useState } from "react";
 import Problem from "./Problem";
 import { problemList } from "../data/data";
+import { useSelector } from "react-redux";
 const ProblemSectionMain = () => {
+  const { difficulty, status } = useSelector((state) => state.slice);
+  const [filteredProblemList, setFilteredProblemList] = useState(problemList);
+
+  useEffect(() => {
+    setFilteredProblemList(
+      problemList.filter(
+        (problem) =>
+          (status === "" || problem.status === status) &&
+          (difficulty === "" || problem.difficulty === difficulty)
+      )
+    );
+  }, [difficulty, status]);
+
   return (
     <div>
-      {problemList.map((problem) => {
+      {filteredProblemList.map((problem) => {
         return (
           <div
             className='ml-10

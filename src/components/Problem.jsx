@@ -1,12 +1,11 @@
 import React from "react";
 import clsx from "clsx";
-import { statusMapping } from "../utils/Mapping";
 const Problem = ({ problem }) => {
   const { status, difficulty, title } = problem;
   return (
     <React.Fragment>
       <div className='text-lg py-4 ml-[50px] w-2/12 px-2 text-white'>
-        {statusMapping[status]}
+        {status}
       </div>
       <div className='text-lg py-4 ml-[50px] w-4/12 pl-12 text-white'>
         {title}
