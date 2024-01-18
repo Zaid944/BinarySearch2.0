@@ -4,7 +4,6 @@ import Editor, { useMonaco } from "@monaco-editor/react";
 import ProblemStatement from "../components/ProblemStatement";
 import { problemList } from "../data/data";
 import { useState } from "react";
-import { Scrollbar } from "react-scrollbars-custom";
 const Problem = () => {
   const { id } = useParams();
   const [problem, setProblem] = useState(
@@ -19,9 +18,10 @@ const Problem = () => {
 
   return (
     <div className='flex'>
-      <Scrollbar style={{ height: "100vh", width: "50vw" }}>
+      <div className='w-1/2 h-screen overflow-scroll'>
         <ProblemStatement problem={problem} />
-      </Scrollbar>
+      </div>
+      <div className='w-[10px] bg-[url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==)] bg-no-repeat bg-center bg-gray-200 cursor-col-resize' ></div>
       <div className='w-1/2'>
         <Editor
           defaultLanguage='javascript'

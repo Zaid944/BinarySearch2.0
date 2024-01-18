@@ -23,7 +23,7 @@ const ProblemStatement = ({ problem }) => {
   const [likeCount, setLikeCount] = useState(like);
   const [dislikeCount, setDislikeCount] = useState(dislike);
   return (
-    <div className="mb-60">
+    <div className='mb-60'>
       <div className='mt-4 flex ml-8 text-slate-800'>
         <div className='text-4xl font-semibold py-4'>{sno}.</div>
         <div className='text-4xl font-semibold py-4 pl-4'>{title}</div>
