@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { setStatus, unsetStatus } from "../redux/filterSlice";
 import GREEN_TICK from "../assets/green-tick.png";
 import clsx from "clsx";
-const StatusDropdownItem = ({ status, selectedFn, selected }) => {
+const StatusDropdownItem = ({ status, selected }) => {
   const dispatch = useDispatch();
   return (
     <div
@@ -14,10 +14,8 @@ const StatusDropdownItem = ({ status, selectedFn, selected }) => {
       )}
       onClick={() => {
         if (selected) {
-          selectedFn("");
           dispatch(unsetStatus());
         } else {
-          selectedFn(status);
           dispatch(setStatus(status));
         }
       }}

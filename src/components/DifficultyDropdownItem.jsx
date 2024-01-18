@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { setDifficulty, unsetDifficulty } from "../redux/filterSlice";
 import GREEN_TICK from "../assets/green-tick.png";
 import clsx from "clsx";
-const DifficultyDropdownItem = ({ difficulty, selectedFn, selected }) => {
+const DifficultyDropdownItem = ({ difficulty, selected }) => {
   const dispatch = useDispatch();
   return (
     <div
@@ -14,10 +14,8 @@ const DifficultyDropdownItem = ({ difficulty, selectedFn, selected }) => {
       )}
       onClick={() => {
         if (selected) {
-          selectedFn("");
           dispatch(unsetDifficulty());
         } else {
-          selectedFn(difficulty);
           dispatch(setDifficulty(difficulty));
         }
       }}
