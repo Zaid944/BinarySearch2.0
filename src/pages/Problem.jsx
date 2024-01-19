@@ -4,6 +4,7 @@ import Editor, { useMonaco } from "@monaco-editor/react";
 import ProblemStatement from "../components/ProblemStatement";
 import { problemList } from "../data/data";
 import { useState } from "react";
+import Split from "react-split";
 const Problem = () => {
   const { id } = useParams();
   const [problem, setProblem] = useState(
@@ -17,19 +18,18 @@ const Problem = () => {
   }
 
   return (
-    <div className='flex'>
-      <div className='w-1/2 h-screen overflow-scroll'>
+    <Split className='flex bg-gray-200'>
+      <div className='h-screen overflow-scroll bg-white cursor-default'>
         <ProblemStatement problem={problem} />
       </div>
-      <div className='w-[10px] bg-[url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==)] bg-no-repeat bg-center bg-gray-200 cursor-col-resize' ></div>
-      <div className='w-1/2'>
+      <div>
         <Editor
           defaultLanguage='javascript'
           defaultValue='// some comment'
           onMount={handleEditorMount}
         />
       </div>
-    </div>
+    </Split>
   );
 };
 
