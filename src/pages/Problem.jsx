@@ -3,7 +3,7 @@ import ProblemStatement from "../components/ProblemStatement/ProblemStatement";
 import { problemList } from "../data/data";
 import { useState } from "react";
 import Split from "react-split";
-import CodeEditor from "../components/CodeEditor/CodeEditor";
+import Landing from "../components/CodeEditor/Landing";
 const Problem = () => {
   const { id } = useParams();
   const [problem, setProblem] = useState(
@@ -14,7 +14,7 @@ const Problem = () => {
       <div className='h-screen overflow-scroll bg-white cursor-default'>
         <ProblemStatement problem={problem} />
       </div>
-      <CodeEditor />
+      <Landing />
     </Split>
   );
 };
