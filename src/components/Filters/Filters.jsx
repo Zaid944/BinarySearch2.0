@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import ARROW_SVG from "../assets/down_arrow.png";
-import SEARCH_ICON from "../assets/search_icon.png";
-import DifficultyDropdown from "./DifficultyDropdown";
-import StatusDropdown from "./statusDropdown";
+import ARROW_SVG from "../../assets/down_arrow.png";
+import SEARCH_ICON from "../../assets/search_icon.png";
+import DifficultyDropdown from "./Difficulty/DifficultyDropdown";
+import StatusDropdown from "./Status/StatusDropdown";
 const Filters = () => {
   const [difficultyDropdown, setDifficultyDropdown] = useState(false);
   const [statusDropdown, setStatusDropdown] = useState(false);

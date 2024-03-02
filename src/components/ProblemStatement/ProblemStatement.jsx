@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { useState } from "react";
-import LikeLight from "../assets/like-light.png";
-import LikeDark from "../assets/like-dark.png";
-import DislikeLight from "../assets/dislike-light.png";
-import DislikeDark from "../assets/dislike-dark.png";
+import LikeLight from "../../assets/like-light.png";
+import LikeDark from "../../assets/like-dark.png";
+import DislikeLight from "../../assets/dislike-light.png";
+import DislikeDark from "../../assets/dislike-dark.png";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
 
 const ProblemStatement = ({ problem }) => {

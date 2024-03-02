@@ -1,4 +1,4 @@
-import { difficultyList } from "../utils/List";
+import { difficultyList } from "../../../utils/List";
 import DifficultyDropdownItem from "./DifficultyDropdownItem";
 import { useSelector } from "react-redux";
 const DifficultyDropdown = () => {

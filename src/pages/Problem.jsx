@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import ProblemStatement from "../components/ProblemStatement";
+import ProblemStatement from "../components/ProblemStatement/ProblemStatement";
 import { problemList } from "../data/data";
 import { useState } from "react";
 import Split from "react-split";
-import CodeEditor from "../components/CodeEditor";
+import CodeEditor from "../components/CodeEditor/CodeEditor";
 const Problem = () => {
   const { id } = useParams();
   const [problem, setProblem] = useState(

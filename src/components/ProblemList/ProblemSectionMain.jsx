@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Problem from "./Problem";
-import { problemList } from "../data/data";
+import { problemList } from "../../data/data";
 import { useSelector } from "react-redux";
 const ProblemSectionMain = () => {
   const { difficulty, status } = useSelector((state) => state.slice);

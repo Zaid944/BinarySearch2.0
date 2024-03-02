@@ -1,9 +1,9 @@
 import Editor, { useMonaco } from "@monaco-editor/react";
 import { useEffect, useRef, useState } from "react";
-import downArrow from "../assets/down_arrow.png";
-import { languageOptions } from "../constants/languageOptions";
-import { defineTheme } from "../utils/defineTheme";
-import { monacoThemes } from "../constants/themeList";
+import downArrow from "../../assets/down_arrow.png";
+import { languageOptions } from "../../constants/languageOptions";
+import { defineTheme } from "../../utils/defineTheme";
+import { monacoThemes } from "../../constants/themeList";
 const CodeEditor = () => {
   const monaco = useMonaco();
   const editorRef = useRef(null);

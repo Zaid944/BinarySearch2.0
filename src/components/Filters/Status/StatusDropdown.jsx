@@ -1,4 +1,4 @@
-import { statusList } from "../utils/List";
+import { statusList } from "../../../utils/List";
 import StatusDropdownItem from "./StatusDropdownItem";
 import { useSelector } from "react-redux";
 const StatusDropdown = () => {

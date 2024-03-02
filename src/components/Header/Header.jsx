@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import IMG_URI from "../assets/code_logo.png";
+import IMG_URI from "../../assets/code_logo.png";
 const Header = () => {
   return (
     <React.Fragment>

@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { setDifficulty, unsetDifficulty } from "../redux/filterSlice";
-import GREEN_TICK from "../assets/green-tick.png";
+import { setDifficulty, unsetDifficulty } from "../../../redux/filterSlice";
+import GREEN_TICK from "../../../assets/green-tick.png";
 import clsx from "clsx";
 const DifficultyDropdownItem = ({ difficulty, selected }) => {
   const dispatch = useDispatch();
