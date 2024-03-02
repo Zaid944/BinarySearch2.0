@@ -10,11 +10,13 @@ const Problem = () => {
     problemList[problemList.findIndex((val) => val.id == id)]
   );
   return (
-    <Split className='flex bg-gray-200'>
+    <Split className='flex'>
       <div className='h-screen overflow-scroll bg-white cursor-default'>
         <ProblemStatement problem={problem} />
       </div>
-      <Landing />
+      <div>
+        <Landing />
+      </div>
     </Split>
   );
 };
