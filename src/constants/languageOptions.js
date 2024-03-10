@@ -2,6 +2,7 @@ export const languageOptions = [
   {
     name: "Javascript",
     value: `console.log('Hello World')`,
+    id: 63,
   },
   {
     name: "Cpp",
@@ -11,6 +12,7 @@ using namespace std;
   cout << "Hello World" << endl;
 }
 `,
+    id: 54,
   },
   {
     name: "Java",
@@ -20,9 +22,11 @@ using namespace std;
   }
 }
 `,
+    id: 62,
   },
   {
     name: "Python",
     value: `print('Hello, World')`,
+    id: 71,
   },
 ];

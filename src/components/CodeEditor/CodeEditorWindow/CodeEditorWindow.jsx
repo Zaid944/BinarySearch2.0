@@ -1,18 +1,15 @@
-import { useState } from "react";
 import Editor from "@monaco-editor/react";
-const CodeEditorWindow = ({ theme, language }) => {
-  const [value, setValue] = useState("");
+const CodeEditorWindow = ({ theme, language, code, setCode }) => {
   function setEditorChange(value) {
-    setValue(value);
+    setCode(value);
   }
   return (
     <div>
       <Editor
         theme={theme.key}
         language={language.name.toLowerCase()}
-        defaultValue={language.value}
         height='50vh'
-        value={value}
+        value={code}
         onChange={setEditorChange}
       />
     </div>

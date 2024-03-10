@@ -5,6 +5,7 @@ import Profile from "./pages/Profile";
 import Compete from "./pages/Compete";
 import Problem from "./pages/Problem";
 function App() {
+  // console.log(import.meta.env.VITE_X_RAPID_API_HOST);
   return (
     <Router>
       <Header />
